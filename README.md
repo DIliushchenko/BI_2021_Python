@@ -1,1 +1,1 @@
-# BI_2021_Python
+Hello there! I'm Dmitrii Iliushchenko, here is my repchik for Python course

@@ -3,36 +3,26 @@ print('Hello, welcome to my project!')
 #### fuction to define dna it's or not
 def are_u_natural (sequence):
     
-    ###go over all nucleotides ###
-    for base in sequence:
-        if base not in 'ATGCU':
-            return False 
-            break 
-            
-    if ('T' in sequence) and ('U' in sequence):
+    sequence = set(sequence)
+        
+    if ('T' in sequence) and ('U' in sequence): ## delete case when T and U in seq
         return False
         
-    return True
-    #elif 'T' in sequence:
-         #return('dna')
-    
-    #elif 'U' in sequence:
-        #return('rna')
-        
+    return sequence.issubset("ATGCU")
         
 def transcribe (sequence):
     
-    trans_seq = ''
+    trans_seq = []
     
     for base in sequence:
         if base == 'T':
-            trans_seq += 'U'
+            trans_seq.append('U')
         elif base == 't':
-            trans_seq += 'u'
+            trans_seq.append('u')
         else:
-            trans_seq += base
+            trans_seq.append(base)
         
-    return(trans_seq)
+    return "".join(trans_seq)
 
 def complement (sequence):
     
@@ -41,39 +31,39 @@ def complement (sequence):
     elif 'U' in sequence:
         type_nuc = 'rna'
      
-    compl_seq = ''
+    compl_seq = []
     
     for base in sequence:
         ## it's important! in dna A goes to T, but in rna A goes to T 
         if type_nuc == 'dna' and base == 'A':
-            compl_seq += 'T'
+            compl_seq.append('T')
         elif type_nuc == 'rna' and base == 'A':
-            compl_seq += 'U'
+            compl_seq.append('U')
         if type_nuc == 'dna' and base == 'a':
-            compl_seq += 't'
+            compl_seq.append('t')
         elif type_nuc == 'rna' and base == 'a':
-            compl_seq += 'u'
+            compl_seq.append('u') 
         elif base == 'T':
-            compl_seq += 'A'
+            compl_seq.append('A') 
         elif base == 't':
-            compl_seq += 'a'
+            compl_seq.append('a')
         elif base == 'U':
-            compl_seq += 'A'
+            compl_seq.apped('A') 
         elif base == 'u':
-            compl_seq += 'a'
+            compl_seq.append('a')
         elif base == 'C':
-            compl_seq += 'G'
+            compl_seq.append('G')
         elif base == 'c':
-            compl_seq += 'g'
+            compl_seq.append('g')
         elif base == 'G':
-            compl_seq += 'C'
+            compl_seq.append('C')
         elif base == 'g':
-            compl_seq +='c'
+            compl_seq.append('c')
     
-    return(compl_seq)        
+    return "".join(compl_seq)        
 
 
-list_of_functions = ('transcribe','reverse','complement','reverse complement','exit')
+list_of_functions = {'transcribe','reverse','complement','reverse complement','exit'} # try use soft instead list
 
 ### Let's type our commands!!!!
 while True:

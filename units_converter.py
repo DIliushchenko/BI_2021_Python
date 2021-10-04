@@ -5,7 +5,7 @@ num_temp = int(temperature[:-1])  # take all numbers except last symbol
 convert_from = temperature[-1]
 
 if convert_from.upper() == "C" and convert_to.upper() == 'F':
-    res = int(round((num_temp * (9/5) + 32)))  
+    res = int(round((num_temp * (9/5) + 32)))
 elif convert_from.upper() == "C" and convert_to.upper() == 'R':
     res = int(round((num_temp + 273.15) * (9/5)))
 elif convert_from.upper() == "F" and convert_to.upper() == 'C':

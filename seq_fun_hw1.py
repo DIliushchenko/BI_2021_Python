@@ -5,7 +5,6 @@ def are_u_natural(sequence):
 
 
     sequence = set(sequence)
-
     if ('T' in sequence) and ('U' in sequence):  # delete case when T and U in seq
         return False
 
@@ -16,7 +15,6 @@ def transcribe(sequence):
 
 
     trans_seq = []
-
     for base in sequence:
         if base == 'T':
             trans_seq.append('U')

@@ -4,8 +4,6 @@ print('Hello, welcome to my project!')
 
 
 def are_u_natural(sequence):
-
-
     sequence = set(sequence)
     if ('T' in sequence) and ('U' in sequence):  # delete case when T and U in seq
         return False
@@ -14,8 +12,6 @@ def are_u_natural(sequence):
 
 
 def transcribe(sequence):
-
-
     trans_seq = []
     for base in sequence:
         if base == 'T':
@@ -29,8 +25,6 @@ def transcribe(sequence):
 
 
 def complement(sequence):
-
-
     if 'T' in sequence:
         type_nuc = 'dna'
     elif 'U' in sequence:

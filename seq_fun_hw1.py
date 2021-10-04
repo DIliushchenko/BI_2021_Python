@@ -1,6 +1,8 @@
 print('Hello, welcome to my project!')
 
 # fuction to define dna it's or not
+
+
 def are_u_natural(sequence):
 
 
@@ -28,7 +30,7 @@ def transcribe(sequence):
 
 def complement(sequence):
 
-    
+
     if 'T' in sequence:
         type_nuc = 'dna'
     elif 'U' in sequence:

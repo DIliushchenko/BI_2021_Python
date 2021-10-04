@@ -28,7 +28,7 @@ def transcribe(sequence):
 
 def complement(sequence):
 
-
+    
     if 'T' in sequence:
         type_nuc = 'dna'
     elif 'U' in sequence:

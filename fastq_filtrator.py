@@ -32,7 +32,7 @@ def cat_fasta(input_fastq, output_file_prefix, gc_bounds, length_bounds, quality
               save_filtered):
     with open(input_fastq, 'r') as input_file:
         correct_reads = open(output_file_prefix + '_passed.fastq', 'w')
-        if save_filtered == True:
+        if save_filtered is True:
             failed_reads = open(output_file_prefix + '_failed.fastq', 'w')
         n = 0
         name_of_read = ''
@@ -53,15 +53,15 @@ def cat_fasta(input_fastq, output_file_prefix, gc_bounds, length_bounds, quality
                 test_gc = gc_check(seq, gc_bounds)
                 test_len = length_check(len_seq, length_bounds)
                 test_quality = quality_check(quality_line, quality_threshold)
-                if test_gc == True and test_len == True and test_quality == True:
+                if test_gc is True and test_len is True and test_quality is True:
                     correct_reads.writelines([name_of_read, seq, ad, quality_line])
                 else:
-                    if save_filtered == True:
+                    if save_filtered is True:
                         failed_reads.writelines([name_of_read, seq, ad, quality_line])
                 n = 0  # go to the next read
 
         correct_reads.close()
-        if save_filtered == True:
+        if save_filtered is True:
             failed_reads.close()
 
 
@@ -90,7 +90,7 @@ quality_input = input('Enter threshold for quality of read (default = 0), enter 
 if quality_input == '':
     quality_threshold = 0
 else:
-    quality_threshold == int(uality_input)
+    quality_threshold = int(quality_input)
 save_filtered = input('Do you want to save failed reads? True or False required (def False): ')
 if save_filtered == '':
     save_filtered = False

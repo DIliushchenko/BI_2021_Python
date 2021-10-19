@@ -75,7 +75,7 @@ if gc_input == '':
     gc_bounds = 0, 100
 elif len(gc_input.split(' ')) == 1:
     gc_bounds = 0, gc_input
-elif len(gc_input.split(' ')) == 1:
+elif len(gc_input.split(' ')) == 2:
     gc_bounds = (tuple(map(int, gc_input.split(' '))))
 
 length_input = input('Enter bounds for length of read (default = 0, 2 ** 32), separated by spaces: ')
@@ -83,7 +83,7 @@ if length_input == '':
     length_bounds = 0, 2 ** 32
 elif len(length_input.split(' ')) == 1:
     length_bounds = 0, length_input
-elif len(length_input.split(' ')) == 1:
+elif len(length_input.split(' ')) == 2:
     length_bounds = (tuple(map(int, length_input.split(' '))))
 
 quality_input = input('Enter threshold for quality of read (default = 0), enter just one number: ')

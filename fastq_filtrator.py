@@ -4,7 +4,7 @@ def gc_check(fast_seq, gc_bound):
     gc_sum = g + c
     nuc_len = len(fast_seq)
     gc_cont = (gc_sum / float(nuc_len)) * 100
-    if gc_bound[0] <= gc_cont <= gc_bound[1]:
+    if float(gc_bound[0]) <= gc_cont <= float(gc_bound[1]):
         return True
     else:
         return False
@@ -69,7 +69,7 @@ def cat_fasta(input_fastq, output_file_prefix, gc_bounds, length_bounds, quality
 print('Hello! This program created special for trimming reads by length, quality and gc content. Enjoy!\nIf you want '
       'default options just enter nothing')
 input_fastq = input('Enter path of your reads including name of file in fastq format: ')
-output_file_prefix = input('Enter path where you want to save your reads')
+output_file_prefix = input('Enter path where you want to save your reads: ')
 gc_input = input('Enter bounds for gc content (default = 0, 100), separated by spaces: ')
 if gc_input == '':
     gc_bounds = 0, 100

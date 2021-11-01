@@ -1,0 +1,10 @@
+Required libraries: to run the scripts:
+google
+aiohttp
+kivy
+Bio (biopython)
+pandas
+scipy
+scanpy
+cv2 (opencv-python)
+lxml

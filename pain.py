@@ -11,7 +11,7 @@ import aiohttp
 import pandas
 import scipy
 import scanpy
-#import cv2
+import cv2
 
 
 class MainWindow(Label):

@@ -55,6 +55,10 @@ pip install opencv-python
 
 pip install lxml
 
+OR! You can use this command to make it in one row!
 
+pip install -r requirements.txt
+
+And all packages will be installed
 
 That's it! Now you can bravely run the script in this repo!

@@ -1,0 +1,9 @@
+google
+aiohttp
+kivy
+biopython
+pandas
+scipy
+scanpy
+opencv-python
+lxml

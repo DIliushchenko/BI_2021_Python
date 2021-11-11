@@ -20,7 +20,7 @@ def matrix_multiplication(A, B):
 
 
 def multiplication_check(mat_list):
-    res = np.zeros((np.shape(mat_list[0])[0],np.shape(mat_list[0])[1]))
+    res = np.zeros((np.shape(mat_list[0])[0], np.shape(mat_list[0])[1]))
     for i in range(1, len(mat_list)):
         if np.shape(res)[1] != np.shape(mat_list[i])[0]:
             return False
@@ -61,7 +61,7 @@ def compute_multidimensional_distance(a1, a2):
 
 def compute_pair_distances(matrix):
 
-    res = np.zeros((np.shape(matrix)[0],np.shape(matrix)[0]))
+    res = np.zeros((np.shape(matrix)[0], np.shape(matrix)[0]))
 
     for i in range(np.shape(matrix)[0]):
 

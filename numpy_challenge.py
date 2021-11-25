@@ -12,9 +12,7 @@ def matrix_multiplication(A, B):
     for i in range(np.shape(A)[0]):
 
         for j in range(np.shape(B)[1]):
-
-            for k in range(np.shape(B)[0]):
-                res[i][j] += A[i][k] * B[k][j]
+                res[i][j] += np.sum(A[i, :] * B[:, j])
 
     return res
 

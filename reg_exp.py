@@ -1,6 +1,6 @@
 import re
 import matplotlib.pyplot as plt
-import seaborn as sns
+
 pattern = re.compile('^ftp')
 
 with open('references.txt', 'r') as ref:

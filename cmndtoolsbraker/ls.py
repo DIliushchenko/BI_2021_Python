@@ -17,10 +17,8 @@ elif len(sys.argv) == 2:
         for f in os.listdir(path):
             if not f.startswith('.'):
                 files.append(f)
-        files.sort()        
+        files.sort()
         print(' '.join(files))
 elif len(sys.argv) == 3:
     path = os.path.join('.', sys.argv[2])
     print(' '.join(os.listdir(path).sort()))
-
-	

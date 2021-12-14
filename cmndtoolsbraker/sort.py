@@ -8,8 +8,8 @@ args = parser.parse_args()
 
 data = []
 for line in args.input_file:
-	data.append(line)
+   data.append(line)
 
 data.sort()
 for line in data:
-	sys.stdout.write(line)
+   sys.stdout.write(line)

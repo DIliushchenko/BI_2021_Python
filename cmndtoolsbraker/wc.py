@@ -12,16 +12,16 @@ args = parser.parse_args()
 res = [0, 0, 0]
 
 for line in args.input_file:
-   res[0] += 1
-   res[1] += len(line.split())
-   res[2] += sys.getsizeof(line)
+    res[0] += 1
+    res[1] += len(line.split())
+    res[2] += sys.getsizeof(line)
 
 
 if not args.lines and not args.words and not args.bytes:
-   print(' '.join(str(x) for x in res))
+    print(' '.join(str(x) for x in res))
 if args.lines:
-   print(res[0], 'lines')
+    print(res[0], 'lines')
 if args.words:
-   print(res[1], 'words')
+    print(res[1], 'words')
 if args.bytes:
-   print(res[2], 'bytes')
+    print(res[2], 'bytes')

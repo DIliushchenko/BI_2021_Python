@@ -59,6 +59,7 @@ class FastaRead:
 
     def __iter__(self):
         ident = None
+        sequence = None
         while True:
             with open(self.path_to_fasta, 'r') as fasta:
                 for line in fasta:
@@ -74,4 +75,3 @@ class FastaRead:
 
 
 get_chaos = FastaRead(your_path, 'amino_acid')
-

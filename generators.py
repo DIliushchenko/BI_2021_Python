@@ -9,6 +9,7 @@ def fasta_gen(path_to_fasta: str):
     :return: tuple of seq ID and complete sequence for this read
     """
     ident = None
+    sequence = None
     with open(path_to_fasta, 'r') as file_fasta:
         for line in file_fasta:
             if line.startswith('>'):
